@@ -4,7 +4,12 @@ class Controller_Welcome extends Controller {
 
 	public function action_index()
 	{
-		$this->response->body('hello, world!');
+        $title = 'Hello world!!!';
+        Template::factory('Index/index', array(
+                'title' => $title,
+            )
+        )->response();
+
 	}
 
 } // End Welcome

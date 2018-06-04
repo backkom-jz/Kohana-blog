@@ -37,7 +37,7 @@ class Kohana_Minion_CLI {
 	 * Returns one or more command-line options. Options are specified using
 	 * standard CLI syntax:
 	 *
-	 *     php index.php --username=john.smith --password=secret --var="some value with spaces"
+	 *     php index.tpl --username=john.smith --password=secret --var="some value with spaces"
 	 *
 	 *     // Get the values of "username" and "password"
 	 *     $auth = Minion_CLI::options('username', 'password');

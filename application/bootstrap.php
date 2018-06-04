@@ -93,7 +93,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  * The following options are available:
  *
  * - string   base_url    path, and optionally domain, of your application   NULL
- * - string   index_file  name of your index file, usually "index.php"       index.php
+ * - string   index_file  name of your index file, usually "index.tpl"       index.tpl
  * - string   charset     internal character set used for input and output   utf-8
  * - string   cache_dir   set the internal cache directory                   APPPATH/cache
  * - integer  cache_life  lifetime, in seconds, of items cached              60

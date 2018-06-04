@@ -19,7 +19,7 @@ class Kohana_URL {
 	 *     // Absolute URL path with no host or protocol
 	 *     echo URL::base();
 	 *
-	 *     // Absolute URL path with host, https protocol and index.php if set
+	 *     // Absolute URL path with host, https protocol and index.tpl if set
 	 *     echo URL::base('https', TRUE);
 	 *
 	 *     // Absolute URL path with host and protocol from $request

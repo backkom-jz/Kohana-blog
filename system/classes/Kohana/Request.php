@@ -671,7 +671,7 @@ class Kohana_Request implements HTTP_Request {
 		}
 
 		// Detect protocol (if present)
-		// $allow_external = FALSE prevents the default index.php from
+		// $allow_external = FALSE prevents the default index.tpl from
 		// being able to proxy external pages.
 		if ( ! $allow_external OR strpos($uri, '://') === FALSE)
 		{

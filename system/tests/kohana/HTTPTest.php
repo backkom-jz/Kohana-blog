@@ -22,7 +22,7 @@ class Kohana_HTTPTest extends Unittest_TestCase {
 	// @codingStandardsIgnoreStart
 	protected $environmentDefault = array(
 		'Kohana::$base_url'    => '/kohana/',
-		'Kohana::$index_file'  => 'index.php',
+		'Kohana::$index_file'  => 'index.tpl',
 		'HTTP_HOST'	           => 'www.example.com',
 	);
 	// @codingStandardsIgnoreEnd
@@ -45,13 +45,13 @@ class Kohana_HTTPTest extends Unittest_TestCase {
 				'/page_one',
 				302,
 				'HTTP_Exception_302',
-				'http://www.example.com/kohana/index.php/page_one'
+				'http://www.example.com/kohana/index.tpl/page_one'
 			),
 			array(
 				'page_two',
 				303,
 				'HTTP_Exception_303',
-				'http://www.example.com/kohana/index.php/page_two'
+				'http://www.example.com/kohana/index.tpl/page_two'
 			),
 		);
 	}
