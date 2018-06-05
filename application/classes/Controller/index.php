@@ -7,11 +7,11 @@ class Controller_Index extends Controller {
 
         $count = DB::select(DB::expr('COUNT(*) AS mycount'))->from('articles')->execute()->get('mycount');
 
-        $num = 2;
+        $perpage = 2;
         //you can configure routes and custom routes params
         $pagination = Pagination::factory(array(
             'total_items'    => $count,
-            'items_per_page' => $num,
+            'items_per_page' => $perpage,
         ))
             ->route_params(array(
                     'controller' => Request::current()->controller(),
@@ -26,7 +26,7 @@ class Controller_Index extends Controller {
             ->limit($pagination->items_per_page)
             ->offset($pagination->offset)
             ->group_by("articles.id")
-            ->execute();
+            ->execute()->as_array();
 
         $title = 'Hello world!!!';
         Template::factory('Index/index', array(

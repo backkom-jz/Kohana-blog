@@ -140,7 +140,10 @@
         </div>
 
         {{/foreach }}
+
         {{$pagination}}
+
+
 
 
     </div>
