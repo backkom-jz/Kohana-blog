@@ -8,6 +8,8 @@ class Controller_Index extends Controller {
         $count = DB::select(DB::expr('COUNT(*) AS mycount'))->from('articles')->execute()->get('mycount');
 
         $perpage = 2;
+
+
         //you can configure routes and custom routes params
         $pagination = Pagination::factory(array(
             'total_items'    => $count,
@@ -18,7 +20,9 @@ class Controller_Index extends Controller {
                     'action'     => Request::current()->action(),
                 )
             );
-        $data = DB::select(SUBSTR('body',0,40),'title','smallbody','articles.id','articles.updated_at','name')
+
+
+        $data = DB::select(SUBSTR('content',0,40),'title','small_title','articles.id','articles.updated_at','name')
             ->from('articles')
             ->join('users')
             ->on('users.id','=','articles.user_id')
@@ -37,4 +41,9 @@ class Controller_Index extends Controller {
         )->response();
 
 	}
+	public function action_total()
+    {
+        $total = Model::factory('articles')->getTotal();
+        echo '库里面有'.$total[0]['total'].'条数据';
+    }
 } // End Welcome

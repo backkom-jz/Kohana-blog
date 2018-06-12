@@ -141,6 +141,16 @@ Cookie::$salt = '123456';
 
 
 /**
+ * 后台路由
+ */
+Route::set('admin', 'admin/<controller>(/<action>(/<id>))')
+    ->defaults(array(
+        'directory' => 'admin',
+        'controller' => 'index',
+        'action' => 'index',
+    ));
+
+/**
  * 默认路由
  */
 Route::set('default', '(<controller>(/<action>(/<id>)))')

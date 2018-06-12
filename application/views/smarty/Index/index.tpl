@@ -8,7 +8,7 @@
     <!--menu begin-->
     <div class="menu">
         <nav class="nav" id="topnav">
-            <h1 class="logo"><a href="http://www.yangqq.com">杨青博客</a></h1>
+            <h1 class="logo"><a href="http://www.yangqq.com">个人博客</a></h1>
             <li><a href="<?php echo url::site('index/index');?>">网站首页</a> </li>
             <li><a href="<?php echo url::site('index/about');?>">关于我</a> </li>
             <li><a href="<?php echo url::site('index/share');?>">模板分享</a>
@@ -55,7 +55,7 @@
     <!--menu end-->
     <!--mnav begin-->
     <div id="mnav">
-        <h2><a href="http://www.yangqq.com" class="mlogo">杨青博客</a><span class="navicon"></span></h2>
+        <h2><a href="http://www.yangqq.com" class="mlogo">个人博客</a><span class="navicon"></span></h2>
         <dl class="list_dl">
             <dt class="list_dt"> <a href="index.html">网站首页</a> </dt>
             <dt class="list_dt"> <a href="about.php">关于我</a> </dt>
@@ -126,8 +126,8 @@
         {{foreach $data as $dataA}}
 
         <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
-            <h3 class="blogtitle"><a href="detail?id={{$dataA['id']}}" target=""> {{$dataA['smallbody']}}</a></h3>
-            <p class="blogtext">{{$dataA['body']}}</p>
+            <h3 class="blogtitle"><a href="detail?id={{$dataA['id']}}" target=""> {{$dataA['small_title']}}</a></h3>
+            <p class="blogtext">{{$dataA['content']}}</p>
             <div class="bloginfo">
                 <ul>
                     <li class="author"><a href="index/detail?id="."{{$dataA['id']}}"> {{$dataA['name']}}</a></li>

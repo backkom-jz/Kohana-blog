@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-06-04 05:47:03
+/* Smarty version 3.1.32, created on 2018-06-12 00:34:02
   from '/Users/wangjiuzhou/PhpstormProjects/Hello_PHP/Kohana-blog/application/views/smarty/Index/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b1518a79f8575_69343837',
+  'unifunc' => 'content_5b1f5b4a92ca54_88593455',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0fab108cc6fa5bc1131f542f3286f202fc73e690' => 
     array (
       0 => '/Users/wangjiuzhou/PhpstormProjects/Hello_PHP/Kohana-blog/application/views/smarty/Index/index.tpl',
-      1 => 1528109192,
+      1 => 1528781638,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./header.tpl' => 1,
   ),
 ),false)) {
-function content_5b1518a79f8575_69343837 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b1f5b4a92ca54_88593455 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html >
 <head>
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
@@ -34,7 +34,7 @@ function content_5b1518a79f8575_69343837 (Smarty_Internal_Template $_smarty_tpl)
     <!--menu begin-->
     <div class="menu">
         <nav class="nav" id="topnav">
-            <h1 class="logo"><a href="http://www.yangqq.com">杨青博客</a></h1>
+            <h1 class="logo"><a href="http://www.yangqq.com">个人博客</a></h1>
             <li><a href="<?php echo '<?php ';?>echo url::site('index/index');<?php echo '?>';?>">网站首页</a> </li>
             <li><a href="<?php echo '<?php ';?>echo url::site('index/about');<?php echo '?>';?>">关于我</a> </li>
             <li><a href="<?php echo '<?php ';?>echo url::site('index/share');<?php echo '?>';?>">模板分享</a>
@@ -81,7 +81,7 @@ function content_5b1518a79f8575_69343837 (Smarty_Internal_Template $_smarty_tpl)
     <!--menu end-->
     <!--mnav begin-->
     <div id="mnav">
-        <h2><a href="http://www.yangqq.com" class="mlogo">杨青博客</a><span class="navicon"></span></h2>
+        <h2><a href="http://www.yangqq.com" class="mlogo">个人博客</a><span class="navicon"></span></h2>
         <dl class="list_dl">
             <dt class="list_dt"> <a href="index.html">网站首页</a> </dt>
             <dt class="list_dt"> <a href="about.php">关于我</a> </dt>
@@ -157,9 +157,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['dataA']->value) {
 
         <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
             <h3 class="blogtitle"><a href="detail?id=<?php echo $_smarty_tpl->tpl_vars['dataA']->value['id'];?>
-" target=""> <?php echo $_smarty_tpl->tpl_vars['dataA']->value['smallbody'];?>
+" target=""> <?php echo $_smarty_tpl->tpl_vars['dataA']->value['small_title'];?>
 </a></h3>
-            <p class="blogtext"><?php echo $_smarty_tpl->tpl_vars['dataA']->value['body'];?>
+            <p class="blogtext"><?php echo $_smarty_tpl->tpl_vars['dataA']->value['content'];?>
 </p>
             <div class="bloginfo">
                 <ul>
@@ -179,7 +179,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['dataA']->value) {
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
         <?php echo $_smarty_tpl->tpl_vars['pagination']->value;?>
+
+
 
 
 
