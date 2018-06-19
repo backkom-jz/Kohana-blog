@@ -18,7 +18,6 @@ class Controller_Admin_Article_Index extends Controller
     {
         $title = 'Hello world!!!';
         $total = Model::factory('articles')->getTotal();
-        var_dump($total);
         $data = Model::factory('articles')->getAll();
         Template::factory('Admin/article/list', array(
                 'total'=>$total,

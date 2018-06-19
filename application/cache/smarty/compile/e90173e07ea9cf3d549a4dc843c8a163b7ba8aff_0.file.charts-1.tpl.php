@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-06-12 03:56:16
+/* Smarty version 3.1.32, created on 2018-06-12 04:47:32
   from '/Users/wangjiuzhou/PhpstormProjects/Hello_PHP/Kohana-blog/application/views/smarty/Admin/chart/charts-1.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b1f8ab09d8369_83094861',
+  'unifunc' => 'content_5b1f96b4efb688_96923934',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e90173e07ea9cf3d549a4dc843c8a163b7ba8aff' => 
     array (
       0 => '/Users/wangjiuzhou/PhpstormProjects/Hello_PHP/Kohana-blog/application/views/smarty/Admin/chart/charts-1.tpl',
-      1 => 1528793257,
+      1 => 1528793916,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../common/_footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b1f8ab09d8369_83094861 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b1f96b4efb688_96923934 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!--_meta 作为公共模版分离出去-->
 <?php $_smarty_tpl->_subTemplateRender('file:../common/_meta.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -63,10 +63,10 @@ function content_5b1f8ab09d8369_83094861 (Smarty_Internal_Template $_smarty_tpl)
 
 <!--请在下方写此页面业务相关的脚本-->
 <?php echo '<script'; ?>
- type="text/javascript" src="lib/hcharts/Highcharts/5.0.6/js/highcharts.js"><?php echo '</script'; ?>
+ type="text/javascript" src="/lib/hcharts/Highcharts/5.0.6/js/highcharts.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- type="text/javascript" src="lib/hcharts/Highcharts/5.0.6/js/modules/exporting.js"><?php echo '</script'; ?>
+ type="text/javascript" src="/lib/hcharts/Highcharts/5.0.6/js/modules/exporting.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  type="text/javascript">

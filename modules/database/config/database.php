@@ -18,10 +18,10 @@ return array
              *
              * Ports and sockets may be appended to the hostname.
              */
-            'hostname'   => 'localhost',
+            'hostname'   => '123.206.26.133',
             'database'   => 'laravel5',
             'username'   => 'root',
-            'password'   => 'wjz123',
+            'password'   => 'Wjz123!!',
             'persistent' => FALSE,
         ),
         'table_prefix' => '',
@@ -39,9 +39,9 @@ return array
              * string   password    database password
              * boolean  persistent  use persistent connections?
              */
-            'dsn'        => 'mysql:host=localhost;dbname=laravel5;charset=utf8',
+            'dsn'        => 'mysql:host=123.206.26.133;dbname=laravel5;charset=utf8',
             'username'   => 'root',
-            'password'   => 'wjz123',
+            'password'   => 'Wjz123!!',
             'persistent' => FALSE,
         ),
         /**

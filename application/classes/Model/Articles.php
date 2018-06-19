@@ -17,4 +17,16 @@ class Model_Articles extends Model
         }
     }
 
+    public function getOne($id)
+    {
+        return DB::select()->from('articles')->where('id','=',$id)->execute()->as_array();
+    }
+
+    public function getUserById($id)
+    {
+        $user_id = DB::select('user_id')->from('articles')->where('id','=',$id)->execute()->as_array();
+        return DB::select('name')->from('users')->where('id','=',$user_id[0])->execute()->as_array();
+    }
+
+
 }

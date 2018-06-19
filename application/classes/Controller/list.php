@@ -1,9 +1,9 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Index extends Controller {
+class Controller_List extends Controller {
 
-	public function action_index()
-	{
+    public function action_index()
+    {
 
         $count = DB::select(DB::expr('COUNT(*) AS mycount'))->from('articles')->execute()->get('mycount');
 
@@ -33,41 +33,13 @@ class Controller_Index extends Controller {
             ->execute()->as_array();
 
         $title = 'Hello world!!!';
-        Template::factory('Index/index', array(
+        Template::factory('Index/list', array(
                 'title' => $title,
                 'data' =>$data,
                 'pagination'=>$pagination,
             )
         )->response();
 
-	}
-	public function action_total()
-    {
-        $total = Model::factory('articles')->getTotal();
-        echo '库里面有'.$total[0]['total'].'条数据';
     }
 
-    public function action_detail()
-    {
-
-        if(!empty($_GET['id'])){
-            $data = Model::factory('articles')->getOne($_GET['id']);
-
-            $title = 'Hello world!!!';
-            Template::factory('Index/detail', array(
-                    'data' =>$data,
-                    'title' => $title,
-                )
-            )->response();
-        }else{
-            $title = 'Hello world!!!';
-            $data = array('code'=>'error001','msg'=>'参数传递错误');
-            Template::factory('Index/index', array(
-                    'data' =>$data,
-                    'title' => $title,
-                )
-            )->response();
-        }
-
-    }
 } // End Welcome
