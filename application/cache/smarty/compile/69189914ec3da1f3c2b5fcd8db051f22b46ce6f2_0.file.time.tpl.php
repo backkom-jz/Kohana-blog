@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-06-19 04:16:42
+/* Smarty version 3.1.32, created on 2018-06-19 06:34:56
   from '/Users/wangjiuzhou/PhpstormProjects/Hello_PHP/Kohana-blog/application/views/smarty/Index/time.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b28c9fa8e4af6_85941302',
+  'unifunc' => 'content_5b28ea607f80e1_64327933',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69189914ec3da1f3c2b5fcd8db051f22b46ce6f2' => 
     array (
       0 => '/Users/wangjiuzhou/PhpstormProjects/Hello_PHP/Kohana-blog/application/views/smarty/Index/time.tpl',
-      1 => 1529399800,
+      1 => 1529400267,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:./header.tpl' => 1,
     'file:./header1.tpl' => 1,
+    'file:./footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b28c9fa8e4af6_85941302 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b28ea607f80e1_64327933 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html>
 <?php $_smarty_tpl->_subTemplateRender('file:./header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -46,7 +47,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['dataA']->value) {
                 <a href="index/detail?id="."<?php echo $_smarty_tpl->tpl_vars['dataA']->value['id'];?>
 " title="<?php echo $_smarty_tpl->tpl_vars['dataA']->value['title'];?>
 ">
-                    <?php echo $_smarty_tpl->tpl_vars['dataA']->value['title'];?>
+                <?php echo $_smarty_tpl->tpl_vars['dataA']->value['title'];?>
 
                 </a>
             </li>
@@ -62,9 +63,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 >
     </div>
 </div>
-<footer>
-    <p>Design by <a href="http://www.yangqq.com" target="_blank">杨青个人博客</a> <a href="/">蜀ICP备11002373号-1</a></p>
-</footer>
+<?php $_smarty_tpl->_subTemplateRender('file:./footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 <a href="#" class="cd-top">Top</a>
 </body>
 </html>
